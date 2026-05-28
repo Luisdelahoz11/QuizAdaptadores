@@ -7,12 +7,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#1A1A2E"
     tools:context=".MainActivity">
+
+    <!-- HEADER horizontal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="48dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <!-- TEXTOS -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UEFA CHAMPIONS LEAGUE"
+                android:textSize="11sp"
+                android:textColor="#C9A227"
+                android:letterSpacing="0.12"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Máximos Ganadores"
+                android:textSize="24sp"
+                android:textColor="#C9A227"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clubes con más títulos en la historia"
+                android:textSize="13sp"
+                android:textColor="#AAAAAA"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- LOGO -->
+        <ImageView
+            android:id="@+id/imgLogoChampions"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvEquipos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F4F6FA"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"/>
 
 </LinearLayout>

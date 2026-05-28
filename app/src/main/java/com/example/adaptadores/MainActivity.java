@@ -1,6 +1,7 @@
 package com.example.adaptadores;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,18 +13,23 @@ import java.util.List;
 
 import com.example.adaptadores.adaptadores.EquipoAdaptador;
 import com.example.adaptadores.clases.Equipos;
+import com.squareup.picasso.Picasso;
 
 
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView rcvEquipos;
     List<Equipos> listEquipos = new ArrayList<>();
+    ImageView imgLogoChampions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        imgLogoChampions = findViewById(R.id.imgLogoChampions);
+
+        Picasso.get().load("https://cdn-img.staticzz.com/img/logos/competicoes/27_imgbank_lc_20250314102703.png").into(imgLogoChampions);
 
         rcvEquipos= findViewById(R.id.rcvEquipos);
 
